@@ -6,7 +6,7 @@
 [![Build Status](https://travis-ci.org/Chive/django-multiupload.svg?branch=master)](https://travis-ci.org/Chive/django-multiupload)
 
 
-Dead simple drop-in multi file upload field for django forms using HTML5's ``multiple`` attribute.
+A range-slider field that uses django's ```forms.CharField()``` and ```jquery-ui``` to stylize and create the field. 
 
 ## Installation
 
@@ -31,6 +31,7 @@ Since we use jquery and jquery-ui forthe widgets , you need to include them in y
 
 ```python
 # templates/base.html
+
 # You should include jquery , jquery-ui.js & jquery-ui.css
 <head>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
