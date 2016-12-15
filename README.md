@@ -24,58 +24,36 @@ $ pip install -e git+https://github.com/Chive/django-multiupload.git#egg=multiup
 
 ## Usage
 
-Add the form field to your form , with or without the optional keyword-arguments.
-
 An example app is avilable at [example app](https://github.com/shakle17/django_range_slider/tree/master/test_slider).
 
 
+Since we use jquery and jquery-ui forthe widgets , you need to include them in your main template (or the template where the widgets will be rendered)
+
 ```python
+# templates/base.html
+# You should include jquery , jquery-ui.js & jquery-ui.css
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<link href="http://code.jquery.com/ui/1.12.0/themes/smoothness/jquery-ui.css" rel="stylesheet">
+<script src="http://code.jquery.com/ui/1.12.0/jquery-ui.min.js" ></script>
+</head>
+```
+
+Add the form field to your form , with or without the optional keyword-arguments.
+* ```label=False``` is set as default value for the input field
+
+```
 # forms.py
 from django import forms
-from multiupload.fields import MultiFileField
+from django_range_slider.fields import RangeSliderField
 
-class UploadForm(forms.Form):
-    attachments = MultiFileField(min_num=1, max_num=3, max_file_size=1024*1024*5)
-
-    # If you need to upload media files, you can use this:
-    attachments = MultiMediaField(
-        min_num=1, 
-        max_num=3, 
-        max_file_size=1024*1024*5, 
-        media_type='video'  # 'audio', 'video' or 'image'
-    )
+class SliderForm(forms.Form):
+     name_range_field = RangeSliderField(minimum=30,maximum=300,name="TestName") # with name inside the input field (no label)
+     range_field = RangeSliderField(minimum=10,maximum=102) # without name or label
+     label_range_field = RangeSliderField(label=True,minimum=1,maximum=10) # with label (no name)
 
     # For images (requires Pillow for validation):
     attachments = MultiImageField(min_num=1, max_num=3, max_file_size=1024*1024*5)
-```
-
-The latter two options just add fancy attributes to HTML's `<input>`, restricting the scope to corresponding filetypes.
-
-```python
-# models.py
-from django.db import models
-
-class Attachment(models.Model):
-    file = models.FileField(upload_to='attachments')
-
-```
-
-```python
-# views.py
-from django.views.generic.edit import FormView
-from .forms import UploadForm
-from .models import Attachment
-
-class UploadView(FormView):
-    template_name = 'form.html'
-    form_class = UploadForm
-    success_url = '/done/'
-
-    def form_valid(self, form):
-        for each in form.cleaned_data['attachments']:
-            Attachment.objects.create(file=each)
-        return super(UploadView, self).form_valid(form)
-
 ```
 
 ## License
