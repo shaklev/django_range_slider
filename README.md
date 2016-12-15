@@ -42,7 +42,7 @@ Since we use jquery and jquery-ui forthe widgets , you need to include them in y
 Add the form field to your form , with or without the optional keyword-arguments.
 * ```label=False``` is set as default value for the input field
 
-```
+```python
 # forms.py
 from django import forms
 from django_range_slider.fields import RangeSliderField
