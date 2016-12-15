@@ -27,7 +27,7 @@ $ pip install -e git+https://github.com/Chive/django-multiupload.git#egg=multiup
 An example app is avilable at [example app](https://github.com/shakle17/django_range_slider/tree/master/test_slider).
 
 
-Since we use jquery and jquery-ui forthe widgets , you need to include them in your main template (or the template where the widgets will be rendered)
+Since we use ```jquery``` and ```jquery-ui``` for the widgets , you need to include them in your main template (or the template where the widgets will be rendered)
 
 ```python
 # templates/base.html
