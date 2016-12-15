@@ -52,7 +52,7 @@ class SliderForm(forms.Form):
 ## Example fields
 
 
-&middot; Range-slider field with name(as argument):
+<big>&middot;</big> Range-slider field with name(as argument):
 
 ```python    
 name_range_field = RangeSliderField(minimum=30,maximum=300,name="TestName") # with name inside the input field (no label)
