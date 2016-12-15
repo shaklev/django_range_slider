@@ -102,5 +102,4 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 </content>
-  <tabTrigger>readme</tabTrigger>
 </snippet>
