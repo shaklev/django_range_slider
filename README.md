@@ -27,7 +27,7 @@ $ pip install -e git+https://github.com/Chive/django-multiupload.git#egg=multiup
 An example app is avilable at [example app](https://github.com/shakle17/django_range_slider/tree/master/test_slider).
 
 
-Since we use ```jquery``` and ```jquery-ui``` for the widgets , you need to include them in your main template (or the template where the widgets will be rendered)
+Since we use ```jquery``` and ```jquery-ui``` for the widget , you need to include them in your main template (or the template where the widget will be rendered)
 
 ```python
 # templates/base.html
@@ -52,9 +52,6 @@ class SliderForm(forms.Form):
      name_range_field = RangeSliderField(minimum=30,maximum=300,name="TestName") # with name inside the input field (no label)
      range_field = RangeSliderField(minimum=10,maximum=102) # without name or label
      label_range_field = RangeSliderField(label=True,minimum=1,maximum=10) # with label (no name)
-
-    # For images (requires Pillow for validation):
-    attachments = MultiImageField(min_num=1, max_num=3, max_file_size=1024*1024*5)
 ```
 
 ## License
