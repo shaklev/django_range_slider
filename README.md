@@ -55,8 +55,21 @@ class SliderForm(forms.Form):
 ```python    
 name_range_field = RangeSliderField(minimum=30,maximum=300,name="TestName") # with name inside the input field (no label)
 ```
-![alt tag](https://s24.postimg.org/oq9tho8ud/Screenshot_from_2016_12_15_04_34_07.png)
+![field with name](https://s24.postimg.org/oq9tho8ud/Screenshot_from_2016_12_15_04_34_07.png)
 
+2. Range-slider field without name or label:
+
+```python    
+     range_field = RangeSliderField(minimum=10,maximum=102) # without name or label
+```
+![field without name or label](https://s28.postimg.org/g1zb96np9/Screenshot_from_2016_12_15_04_37_52.png)
+
+3. Range-slider field with label:
+
+```python    
+     label_range_field = RangeSliderField(label="TestLabel",minimum=1,maximum=10) # with label (no name)
+```
+![field with label](https://s28.postimg.org/v0y7n946l/Screenshot_from_2016_12_15_04_37_34.png)
 
 ## License
 MIT License
