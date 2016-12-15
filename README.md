@@ -13,13 +13,7 @@ A range-slider field that uses django's ```forms.CharField()``` and ```jquery-ui
 * Install the package using pip (or easy_install if you really have to)
 
 ```bash
-$ pip install django-multiupload
-```
-
-* Or directly from this repository to get the development version (if you're feeling adventurous)
-
-```bash
-$ pip install -e git+https://github.com/Chive/django-multiupload.git#egg=multiupload
+$ pip install django_range_slider
 ```
 
 ## Usage
