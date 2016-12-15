@@ -1,4 +1,4 @@
-# django_range_slider
+# DJANGO RANGE SLIDER
 
 <snippet>
   <content>
