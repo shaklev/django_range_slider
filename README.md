@@ -55,8 +55,7 @@ class SliderForm(forms.Form):
 ```python    
 name_range_field = RangeSliderField(minimum=30,maximum=300,name="TestName") # with name inside the input field (no label)
 ```
-<img src="https://postimg.org/image/59fdf9sar/">
-
+![alt tag](https://postimg.org/image/59fdf9sar/)
 
 
 ## License
