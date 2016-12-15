@@ -24,9 +24,9 @@ $ pip install -e git+https://github.com/Chive/django-multiupload.git#egg=multiup
 
 ## Usage
 
-Add the form field to your form and make sure to save the uploaded files in the form's ``save`` method.
+Add the form field to your form , with or without the optional keyword-arguments.
 
-For more detailed examples visit the [examples section](https://github.com/Chive/django-multiupload/tree/master/examples).
+An example app is avilable at [example app](https://github.com/shakle17/django_range_slider/tree/master/test_slider).
 
 
 ```python
