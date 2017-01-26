@@ -80,7 +80,7 @@ name_range_field = RangeSliderField(minimum=30,maximum=300,name="TestName") # wi
 ## License
 MIT License
 
-Copyright (c) 2016 Aleksandar
+Copyright (c) 2016 Aleksandar Shaklev
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
