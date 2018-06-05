@@ -3,10 +3,11 @@ from django.utils.safestring import mark_safe
 import re
 
 class RangeSlider(forms.TextInput):
-    def __init__(self, minimum, maximum, elem_name,*args,**kwargs):
+    def __init__(self, minimum, maximum, step, elem_name,*args,**kwargs):
         widget = super(RangeSlider,self).__init__(*args,**kwargs)
         self.minimum = str(minimum)
         self.maximum = str(maximum)
+        self.step = str(step)
         self.elem_name = str(elem_name)
 
     def render(self, name, value, attrs=None):
@@ -19,6 +20,7 @@ class RangeSlider(forms.TextInput):
         range: true,
         min: """+self.minimum+""",
         max: """+self.maximum+""",
+        step: """+self.step+""",
         values: [ """+self.minimum+""","""+self.maximum+""" ],
         slide: function( event, ui ) {
           $( "#id_"""+self.elem_id+"""" ).val(" """ + self.elem_name + """ "+ ui.values[ 0 ] + " - " + ui.values[ 1 ] );
