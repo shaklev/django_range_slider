@@ -60,10 +60,10 @@ name_range_field = RangeSliderField(minimum=30,maximum=300,name="TestName") # wi
 ![field with name](https://s24.postimg.org/oq9tho8ud/Screenshot_from_2016_12_15_04_34_07.png)
 
 
-- Range-slider field without name or label:
+- Range-slider field without name or label , with step:
 
 ```python    
-     range_field = RangeSliderField(minimum=10,maximum=102) # without name or label
+     range_field = RangeSliderField(minimum=10,maximum=102,step=2) # without name or label
 ```
 ![field without name or label](https://s28.postimg.org/g1zb96np9/Screenshot_from_2016_12_15_04_37_52.png)
 
