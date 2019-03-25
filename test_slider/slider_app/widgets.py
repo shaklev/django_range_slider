@@ -10,7 +10,7 @@ class RangeSlider(forms.TextInput):
         self.step = str(step)
         self.elem_name = str(elem_name)
 
-    def render(self, name, value, attrs=None):
+    def render(self, name, value, attrs=None, renderer=None):
         s = super(RangeSlider, self).render(name, value, attrs)
         self.elem_id = re.findall(r'id_([A-Za-z0-9_\./\\-]*)"',s)[0]
         html = """<div id="slider-range-"""+self.elem_id+""""></div>
